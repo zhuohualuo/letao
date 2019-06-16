@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+a {
+  color: #333!important;
+  text-decoration: none;
+}
+body {
+  font-size: 14px!important;
+}
+.my-header {
+  background-color: #006699;
+}
+.my-header h1 {
+  color: #fff;
+}
+.my-header a {
+  color: #fff;
+}
+.my-footer {
+  background: #006699;
+}
+.my-footer .mui-tab-item {
+  color: #fff;
+}
+.my-footer .mui-tab-item.mui-active {
+  color: orange;
+}
+.container {
+  padding: 10px;
+}
+.container .search {
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+.container .search > input[type="text"] {
+  height: 100%;
+  width: 100%;
+  padding-right: 70px;
+  font-size: 14px;
+  border: 1px solid #006699;
+}
+.container .search > input[type="button"] {
+  height: 100%;
+  width: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #006699;
+  border-radius: 0;
+  border: 1px solid #006699;
+  color: #fff;
+}
+.container .title {
+  margin-top: 20px;
+}
+.container span {
+  padding-bottom: 10px;
+}
+.container span:first-of-type {
+  float: left;
+}
+.container span:last-of-type {
+  float: right;
+  line-height: normal;
+}
+.container .fa-trash:before {
+  margin-right: 10px;
+}

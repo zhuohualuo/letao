@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/category.css">
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="./zepto/zepto.min.js"></script>
+    <script src="./artTemplate/template.js"></script>
+    <script src="./js/category.js"></script>
+    <script src="./js/common.js"></script>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav my-header">
+        <h1 class="mui-title">乐淘云购</h1>
+        <a class="mui-icon mui-icon-search mui-pull-right"></a>
+    </header>
+    <nav class="mui-bar mui-bar-tab my-footer">
+        <a class="mui-tab-item mui-active" href="index1.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon fa fa-shopping-cart "></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="user.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <!-- my-content -->
+    <div class="my_content">
+
+        <div class="left">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <ul id="ul">
+                        <!-- <li class="active"><a href="javascript:;">运动馆</a></li> -->
+                        <!-- <li><a href="javascript:;">男士馆</a></li> -->
+                        <!-- 一级目录模板 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <ul class="mui-clearfix" id="ul2">
+                        <!-- 二级模板 -->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        mui('.mui-scroll-wrapper').scroll({
+            deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+        });
+    </script>
+    <script type="text/template" id="templateLeft">
+        {{each rows as value index }}
+        <li data="{{value.id}}"><a href="javascript:;">{{value.categoryName}}</a></li>
+        {{/each}}
+    </script>
+    <script type="text/template" id="templateRight">
+        {{each rows as value index}}
+        <li>
+            <a href="javascript:;">
+                <img src="{{value.brandLogo}}" alt="">
+                <p>{{value.brandName}}</p>
+            </a>
+        </li>
+        {{/each}} {{if !rows.length}}
+        <span>没有数据</span> {{/if}}
+    </script>
+</body>
+
+</html>

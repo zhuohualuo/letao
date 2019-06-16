@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+a {
+  color: #333!important;
+  text-decoration: none;
+}
+body {
+  font-size: 14px!important;
+}
+.my-header {
+  background-color: #006699;
+}
+.my-header h1 {
+  color: #fff;
+}
+.my-header a {
+  color: #fff;
+}
+.my-footer {
+  background: #006699;
+}
+.my-footer .mui-tab-item {
+  color: #fff;
+}
+.my-footer .mui-tab-item.mui-active {
+  color: orange;
+}
